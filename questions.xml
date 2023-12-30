@@ -1,0 +1,118 @@
+<HTMLQuestion xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2011-11-11/HTMLQuestion.xsd">
+<HTMLContent><![CDATA[
+<!-- YOUR HTML BEGINS -->
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+            <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+        </head>
+        <body>
+            <form name='mturk_form' method='post' id='mturk_form' 
+            action='https://www.mturk.com/mturk/externalSubmit'><input type='hidden' value='' 
+            name='assignmentId' id='assignmentId'/>
+            
+            <!-- You must include this JavaScript file -->
+            <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+            <!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+                please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+            <!-- You must include crowd-form so that your task submits answers to MTurk -->
+
+            <style>
+                .image-grid {
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-gap: 10px;
+                    margin: 20px;
+                }
+                .image-container {
+                    position: relative;
+                    cursor: pointer;
+                }
+                .image-container img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+                .clicked {
+                    opacity: 0.5;
+                }
+                .image-number {
+                    position: absolute;
+                    top: 50%; /* Center vertically */
+                    left: 50%; /* Center horizontally */
+                    transform: translate(-50%, -50%); /* Adjust for exact centering */
+                    color: red;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 60px;
+                    z-index: 10;
+                    display: none; /* Hide initially */
+                }
+            </style>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var imageContainers = document.querySelectorAll('.image-grid .image-container');
+                    var clickOrder = 1;
+
+                    imageContainers.forEach(function(container) {
+                        var img = container.querySelector('img');
+                        var numberDiv = document.createElement('div');
+                        numberDiv.classList.add('image-number');
+                        container.appendChild(numberDiv);
+
+                        container.addEventListener('click', function() {
+                            if (!img.classList.contains('clicked')) {
+                                img.classList.add('clicked');
+                                numberDiv.textContent = clickOrder++;
+                                numberDiv.style.display = 'block'; // Show the number
+                            }
+                        });
+                    });
+                });
+            </script>
+
+            <crowd-form>
+                
+                <h2>This is a <span style="color:blue">heading</span>.</h2>
+                
+                <div class="image-grid">
+                    <div class="image-container">
+                        <img class="image" src="https://mturk-guide.s3.us-west-2.amazonaws.com/img1.png" alt="Image 1">
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="https://mturk-guide.s3.us-west-2.amazonaws.com/img2.png" alt="Image 2">
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="https://mturk-guide.s3.us-west-2.amazonaws.com/img3.png" alt="Image 3">
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="https://mturk-guide.s3.us-west-2.amazonaws.com/img4.png" alt="Image 4">
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="https://mturk-guide.s3.us-west-2.amazonaws.com/img5.png" alt="Image 5">
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="https://mturk-guide.s3.us-west-2.amazonaws.com/img6.png" alt="Image 6">
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="https://mturk-guide.s3.us-west-2.amazonaws.com/img7.png" alt="Image 7">
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="https://mturk-guide.s3.us-west-2.amazonaws.com/img8.png" alt="Image 8">
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="https://mturk-guide.s3.us-west-2.amazonaws.com/img9.png" alt="Image 9">
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="https://mturk-guide.s3.us-west-2.amazonaws.com/img10.png" alt="Image 10">
+                    </div>
+                </div>
+            </crowd-form>
+        </body>
+    </html>
+]]></HTMLContent>
+<FrameHeight>600</FrameHeight>
+</HTMLQuestion>
+
