@@ -11,8 +11,8 @@ MTURK_SB_VIZ = "https://workersandbox.mturk.com/mturk/preview?groupId="
 sandbox = True
 
 # for security purposes, these keys shouldn't be public
-ACCESS_KEY_ID = "AKIA3UFVESAJ72RDFVIB"
-SECRET_ACCESS_KEY = "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"
+ACCESS_KEY_ID = ""
+SECRET_ACCESS_KEY = ""
 
 mturk = boto3.client(
     "mturk",
