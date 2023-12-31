@@ -1,5 +1,6 @@
 import boto3
 import xmltodict
+import ast
 
 # these are base links to view/access HITs that have been published
 MTURK_SANDBOX = "https://mturk-requester-sandbox.us-east-1.amazonaws.com"
@@ -44,3 +45,8 @@ worker_results = mturk.list_assignments_for_hit(
 
 for result in worker_results:
     d = xmltodict.parse(result["Answer"])
+    image_rankings = ast.literal_eval(
+        ast.literal_eval(d["QuestionFormAnswers"]["Answer"]["FreeText"])[0][
+            "clickedImages"
+        ]
+    )

@@ -81,10 +81,10 @@ for series in data:
         Description="Rank a series images from 1 to 10",
         Keywords="rank, image, quick, labeling, easy, simple, fast",
         Reward="0.45",
-        MaxAssignments=10,
-        LifetimeInSeconds=23300,
-        AssignmentDurationInSeconds=130,
-        AutoApprovalDelayInSeconds=2100,
+        MaxAssignments=1,
+        LifetimeInSeconds=1000,
+        AssignmentDurationInSeconds=200,
+        AutoApprovalDelayInSeconds=2345,
         Question=question,
         QualificationRequirements=[]
         if sandbox
