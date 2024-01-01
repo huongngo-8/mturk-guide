@@ -57,6 +57,7 @@
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     var imageContainers = document.querySelectorAll('.image-grid .image-container');
+                    <!--List to hold the results-->
                     var clickedImagesSrc = [];
                     var clickedImagesInput = document.getElementById('clicked-images-input');
                     var clickOrder = 1;
@@ -70,9 +71,11 @@
                         container.addEventListener('click', function() {
                             if (!img.classList.contains('clicked')) {
                                 img.classList.add('clicked');
+                                <!--This is where the image clicked on is added to the list. It will retain the order-->
                                 clickedImagesSrc.push(img.src);
                                 numberDiv.textContent = clickOrder++;
                                 numberDiv.style.display = 'block'; // Show the number
+                                <!--The list is updated-->
                                 clickedImagesInput.value = JSON.stringify(clickedImagesSrc);
                             }
                         });
@@ -83,7 +86,7 @@
             <crowd-form>
                 
                 <h2>This is a <span style="color:blue">heading</span>.</h2>
-
+                <!--Initializing the list to collect the input-->
                 <input type="hidden" id="clicked-images-input" name="clickedImages" value="[]">
                 
                 <div class="image-grid">
@@ -121,6 +124,7 @@
             </crowd-form>
         </body>
     </html>
+<!-- YOUR HTML ENDS -->
 ]]></HTMLContent>
 <FrameHeight>600</FrameHeight>
 </HTMLQuestion>
