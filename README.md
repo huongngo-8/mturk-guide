@@ -8,7 +8,7 @@ If you have any questions or suggestions, feel free to submit a pull request.
 
 You should setup your MTurk **Requester** account through your AWS account as MTurk billing works through AWS. Then, go to the Developer tab the MTurk website.
 
-![Developer Tab](/Users/huongngo/Desktop/research/videonet/mturk-guide/images/Screenshot 2023-12-31 at 11.05.36 PM.png)
+![Developer Tab](/Users/huongngo/Desktop/research/videonet/mturk-guide/images/Screenshot 2023-12-31 at 11.05.36 PM.png "This is an image")
 
 Follow the instructions outlined on the page, especially Step 2 which entails getting your **AWS access keys**. You will need them to use the MTurk client from AWS' boto3 API.
 
