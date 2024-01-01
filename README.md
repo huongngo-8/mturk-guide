@@ -14,6 +14,8 @@ Follow the instructions outlined on the page, especially Step 2 which entails ge
 
 Make sure to also register for the **MTurk Developer Sandbox** and **MTurk Worker Sandbox** to test out your task interfaces before publishing HITs. You will need the developer sandbox to publish HITs to test and the worker sandbox to interact with the task itself. 
 
+![Create Project](./images/create_project.png)
+
 # Task Template
 
 Refer to **questions.xml** to see an example of the task interface code. All you need to do is replace the HTML code in between ``YOUR HTML BEGINS`` and ``YOUR HTML ENDS``. However, make sure to **retain this chunk of code in your HTML code:**
@@ -35,6 +37,10 @@ Refer to **questions.xml** to see an example of the task interface code. All you
 In order for the user to submit the task, you **MUST use the ``crowd-form`` element.**
 
 It is highly recommended to edit your task interface on MTurk. You can do so by creating a project and replacing the HTML code there with yours. 
+
+Below is an example of what a task might look like in the sandbox environment. 
+
+![Task Example](./images/task_example.png)
 
 # Publishing HITs
 
